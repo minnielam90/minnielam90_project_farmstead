@@ -1,0 +1,73 @@
+!!! Các trang sẽ làm trong dự án:
+  1. Home
+  2. About
+  3. Services 
+  4. Blog Posts
+  5. 404 Page
+  6. Contact
+
+***** html setup *****
+
+file index.html sẽ là file cho trang home trong dự án Farmstead
+
+5 trang còn lại của dự án sẽ được bỏ vào thư mục "pages" và được đặt tên theo các mục trong menu header
+  vd: about.html, services.html
+
+Cách đặt tên class hay id cho các section chính trên một trang để không bị mâu thuẫn trong lúc code:
+  [tên trang]_[tên thành phần]
+  vd: <section class="home_carousel"></section>
+      <section id="about_welcome" class="about_welcome"></section>
+
+***** css setup *****
+
+File style.css sẽ config cho GLOBAL và HEADER. Khi tạo file css cho trang nào 
+thì đặt tên theo: style.[tên trang].css để phân biệt
+  vd: tạo file css cho trang about thì nên đặt tên: style.about.css
+
+Các trang khác nhau sẽ có các file css khác nhau, do vậy nên khi setup phần <head></head> cho các trang khác nhau cần link 2 file css theo ĐÚNG THỨ TỰ sau bao gồm:
+  1. style.css
+  2. style.[tên trang].css
+
+  vd: Khi mình làm trang home thì mình sẽ link 2 file css vào phần <head></head>
+    <head>
+      ...
+      <link rel="stylesheet" href="./css/style.css">
+      <link rel="stylesheet" href="./css/style.home.css">
+    </head>
+
+***** image setup *****
+Link demo farmstead: https://wp.w3layouts.com/farmstead/ 
+
+Khi tải các hình ảnh từ website demo về sẽ bỏ vào thư mục img và bỏ vào thư mục tên trang tương ứng
+  vd: Hình ảnh download từ trang home về sẽ bỏ vào img/Home. Trong lúc code trang Home cần gọi hình ảnh thì mình sẽ gọi: 
+    "./img/home/..."
+    "../img/about/..." (nếu đang code trang about.html và ở trong thư mục pages muốn lấy ảnh ở thư mục "img" -> "about" )
+
+File favicon.png trong "img" là để cài đặt logo cho website
+
+***** JS setup *****
+
+Các thư viện animation online sẽ bỏ vào đây
+
+Các code javascript riêng sẽ viết trong file script.js
+
+***** Git setup *****
+
+Lưu ý: Trước khi bắt đầu tạo nhánh mới để làm phải chạy lệnh git pull trước rồi mới git checkout -b [nhánh mới] để làm phần mình
+
+Ai làm trang nào thì sẽ tạo nhánh tên trang đó để làm rồi mới merge vào nhánh chính sau
+  vd: Mình làm trang home thì mình sẽ: git checkout -b home rồi mới bắt đầu code
+
+Trong trường hợp, đang trong lúc làm trên nhánh mình mà ở nhánh chính có code mới thì cần quay về nhánh chính với git checkout rồi git pull code mới về local. Sau đó lại checkout về nhánh mình đang làm rồi dùng lệnh git rebase [tên nhánh chính - master] để cập nhật code mới từ nhánh chính vào nhánh đang làm rồi tiếp tục code bình thường.
+
+Và đặc biệt lưu ý ai làm xong trang nào báo vào nhóm trước khi làm trang tiếp theo để quản lý, kiểm tra và merge code lên nhánh chính. Có 2 trường hợp xảy ra sau đó:
+  1. Mọi thứ tốt không có lỗi hay conflict code -> Merge code mới lên nhánh chính và mn pull code mới merge về và làm tiếp phần tiếp theo
+  2. Có lỗi trong phần code -> Người làm tự chỉnh sửa và khi hoàn thành lại push code và nhắn nhóm
+     Có conflict trong code -> Mọi người họp với nhau để thống nhất fix conflict 
+
+* Trong lúc làm ở nhánh phụ, để tránh mất code, thường xuyên commit code để khi phát sinh lỗi không mong muốn mất code có thể git stash trở lại code trong lần commit gấn nhất !!!
+
+!!! Khi gặp khó khăn hay vấn đề trong lúc làm, nhắn báo nhóm hoặc tìm mentors trên lớp để hỗ trợ sớm nhất có thể nhé !!!
+
+------😃😃😃 Chúc mọi người làm tốt. Cảm ơn đã đọc file này nhé !!! 😃😃😃-------
+*** File này chỉ để tham khảo mọi người có thể tùy biến nhé ^^ ***
